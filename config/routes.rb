@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'customers/new'
   
   get'/signup', to: 'customers#new'
   post'/signup', to: 'customers#create'
@@ -13,7 +14,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   
   root 'static_pages#home'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
+  
+  resources:customers
 end
