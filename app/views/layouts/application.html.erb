@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<title><%= yield(:title) %> | RAD App</title>
 <html>
   <head>
-    <title>TutApp</title>
+    <title>DevApp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
+
+
