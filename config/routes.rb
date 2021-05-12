@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'customers/new'
   
   get'/signup', to: 'customers#new'
-  post'/signup', to: 'customers#create'
 
   get '/login', to: 'users#login'
 
